@@ -1,5 +1,6 @@
 "use client"
 
+import { ImageApp } from "@/lib/appImages"
 import Link from "next/link"
 
 export default function Hero() {
@@ -42,7 +43,7 @@ export default function Hero() {
             </Link>
           </div>
           <div className={"md:w-3/5 mt-10 md:mt-0"}>
-            <img src={""} className={""} />
+            <img src={ImageApp.hero} className={""} />
           </div>
         </div>
       </div>

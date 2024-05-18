@@ -1,9 +1,9 @@
-import Navbar from "./components/navbar";
-
-
+import HomeClient from "./components/client"
 
 export default function HomePage() {
-  return <div>
-    <Navbar/>
-  </div>
+  return (
+    <div>
+      <HomeClient />
+    </div>
+  )
 }
