@@ -1,10 +1,10 @@
 export type SiteConfig = typeof siteConfig
 
 export const siteConfig = {
-  name: "Bookton",
+  name: "Foodie",
   description:
-    `Ebook project that allows you to purchase books with with your 
-    gift card and gives you discount for any purchase made.`,
+    `Ebook project that makes it more convienent and easy to order for food at your pace, 
+    and allows customers to make payment with minipay wallet.`,
   
   links: {
     twitter: "https://twitter.com/shadcn",
