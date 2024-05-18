@@ -3,6 +3,7 @@
 import { ImageApp } from "@/lib/appImages"
 import Link from "next/link"
 
+
 export default function Hero() {
   return (
     <div className={"w-[100%] flex justify-center items-center h-[90vh]"}>
@@ -47,6 +48,7 @@ export default function Hero() {
           </div>
         </div>
       </div>
+      
     </div>
   )
 }
