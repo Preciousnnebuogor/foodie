@@ -1,5 +1,51 @@
 "use client"
 
-export default function Hero () {
-    return <div></div>
+import Link from "next/link"
+
+export default function Hero() {
+  return (
+    <div className={"w-[100%] flex justify-center items-center h-[90vh]"}>
+      <div className={" mx-auto p-5 h-full w-[80%]"}>
+        <div className={"mt-20 md:flex md:flex-row "}>
+          <div
+            className={
+              "md:w-2/5 flex flex-col justify-center mb-4 items-center "
+            }>
+           <h2
+              className={
+                "text-5xl text-center md:text-left md:self-start mt-20 md:mt-0"
+              }
+            >
+              Special delicacy for more
+            </h2>
+            <p
+              className={
+                "uppercase trackin-wide text-center md:text-left md:self-start "
+              }
+            >
+              Our brand is sure and here
+            </p>
+            <p
+              className={
+                "uppercase trackin-wide text-center md:text-left md:self-start"
+              }
+            >
+              our brand motto pass here
+            </p>
+            <Link
+              href={""}
+              className={
+                "rounded-full bg-gradient-to-r from-orange-100 to bg-orange-400 py-4 px-8 uppercase text-xl md:self-start my-5"
+              }
+            >
+              Shop Now
+            </Link>
+          </div>
+          <div className={"md:w-3/5 mt-10 md:mt-0"}>
+            <img src={""} className={""} />
+          </div>
+        </div>
+      </div>
+    </div>
+  )
 }
