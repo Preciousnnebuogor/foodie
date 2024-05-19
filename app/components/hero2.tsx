@@ -24,7 +24,7 @@ export default function Hero2(){
        }}
        transition={{duration: 5, ease:"easeInOut", repeat:Infinity,repeatDelay:1}}
        >
-       <img src={ImageApp.food11} />
+       <img src={ImageApp.food1} />
         </motion.section> 
 
         <motion.section

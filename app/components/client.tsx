@@ -7,6 +7,8 @@ export default function HomeClient() {
     <div className={""}>
       <Hero />
       <Hero2/>
+      
+      
     </div>
   )
 }
