@@ -8,7 +8,7 @@ export default function Hero() {
   return (
     <div className={"w-[100%] flex justify-center items-center h-[90vh]"}>
       <div className={" mx-auto p-5 h-full w-[80%]"}>
-        <div className={"mt-20 md:flex md:flex-row "}>
+        <div className={"mt-8 md:mt-20 md:flex md:flex-row "}>
           <div
             className={
               "md:w-2/5 flex flex-col justify-center mb-4 items-center "
@@ -43,7 +43,7 @@ export default function Hero() {
               Shop Now
             </Link>
           </div>
-          <div className={"md:w-3/5 mt-10 md:mt-0"}>
+          <div className={"md:w-3/5 mt-5 md:mt-0"}>
             <img src={ImageApp.hero} className={""} />
           </div>
         </div>
