@@ -19,7 +19,7 @@ export default function Footer(){
             </Link>
 
             <Link
-              href={"/"}
+              href={"https://x.com/Precious24147291?t=JRMRhs3-zb0OaT9LyhTIPA&s=09"}
               className={"text-blue-600 p-4"}>
               <IoLogoDiscord />
             </Link>
@@ -31,7 +31,7 @@ export default function Footer(){
             </Link>
 
             <Link
-              href={"/"}
+              href={"http://www.instagram.com/preciousperfection1?utm_source=qr&igsh=eXZkMDJnOHhvZHho"}
               className={"text-pink-600 p-4"}>
               <FaInstagram />
             </Link>
