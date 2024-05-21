@@ -1,19 +1,23 @@
 "use client"
-import Link from "next/link"
 
-import { ImageApp } from "@/lib/appImages"
+import Link from "next/link"
 
 import { ProductList } from "./data"
 
 export default function ProductPage() {
   return (
     <>
-     <div className={`flex items-center justify-center text-xl md:mt-20 mt-28 px-4`}>
-          <p>The way to a King's heart is through delicious delicacy, 
-            get the essential nutrient your body needs today. <br/>
-            Each of the delicacy below are all available for you order.<br/>
-            Home delivery is also available for all location within Nigeria.</p>
-        </div>
+      <div
+        className={`flex items-center justify-center text-xl md:mt-20 mt-28 px-4`}
+      >
+        <p>
+          The way to a Kings heart is through delicious delicacy, get the
+          essential nutrient your body needs today. <br />
+          Each of the delicacy below are all available for you order.
+          <br />
+          Home delivery is also available for all location within Nigeria.
+        </p>
+      </div>
       <div className={" items-center flex justify-center"}>
         <div
           className={

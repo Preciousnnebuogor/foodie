@@ -1,6 +1,4 @@
 "use client"
-import { ImageApp } from "@/lib/appImages"
-
 import { ProductList } from "../data"
 import { useProductStore } from "@/lib/store"
 
