@@ -5,7 +5,7 @@ import { IoMdAdd, IoMdRemove } from "react-icons/io"
 import { useProductStore } from "@/lib/store"
 
 export default function Cart() {
-  
+  const store = useProductStore()
   return (
     <div className="w-full flex flex-col items-center">
       <div
