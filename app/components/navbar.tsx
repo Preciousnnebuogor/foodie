@@ -1,9 +1,11 @@
 "use client"
 import { ThemeToggle } from "@/comps"
 import { ImageApp } from "@/lib/appImages";
+import { useProductStore } from "@/lib/store";
 import Link from "next/link";
 
 export default function Navbar() {
+  const store = useProductStore
   return (
     <div className={"bg-primary border-b-2 fixed top-0 w-screen"}>
       <div className={"mx-auto md:px-6 px-4 py-2 "}>
@@ -19,14 +21,14 @@ export default function Navbar() {
             >
               Home
             </Link>
-            <Link href={"/"} className={" hover:text-gray-50 p-4"}>
+            <Link href={"/product"} className={" hover:text-gray-50 p-4"}>
               Meal
             </Link>
             <Link href={"/"} className={" hover:text-gray-50 p-4"}>
               Admin
             </Link>
             <Link
-              href={"/"}
+              href={"/cart"}
               className={
                 "  hover:text-gray-50 p-3 px-5 "
               }
