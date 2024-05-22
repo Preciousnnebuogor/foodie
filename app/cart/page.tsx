@@ -54,6 +54,10 @@ export default function Cart() {
                 <button
                   className={`flex items-center justify-center rounded-3xl 
                 border-2 bg-primary p-4 font-bold size-12`}
+                onClick={() => {
+                  store.decrementQuantity(product.id)
+                  console.log("Remove product:", product.id)
+                }}
                 >
                   <IoMdRemove />
                 </button>
