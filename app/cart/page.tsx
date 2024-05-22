@@ -1,11 +1,17 @@
 "use client"
 
-import { IoMdAdd, IoMdRemove } from "react-icons/io"
+import { IoMdAdd, IoMdClose, IoMdRemove } from "react-icons/io"
 
 import { useProductStore } from "@/lib/store"
 
 export default function Cart() {
   const store = useProductStore()
+
+  function calcTotal(): number{
+    return store.cart.reduce((accum, product) => {
+      return accum + product.price * product.quantity
+    }, 0)
+  }
   return (
     <div className="w-full flex flex-col items-center">
       <div
@@ -53,24 +59,15 @@ export default function Cart() {
                 </button>
 
                 <button
-                  className={`flex items-center justify-center rounded-3xl 
-                border-2 bg-primary p-4 font-bold size-12`}
+                  className={`flex size-12 items-center justify-center 
+                rounded-3xl border-2 bg-primary p-4 font-bold`}
+                  onClick={() => {
+                    store.removeFromCart(product.id)
+                    console.log("Remove product:", product.id)
+                  }}
                 >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke-width="1.5"
-                    stroke="currentColor"
-                    className="w-6 h-6"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      d="M6 18 18 6M6 6l12 12"
-                    />
-                  </svg>
-                </button>
+                  <IoMdClose />
+                </button>  
               </div>
             </div>
           </div>
