@@ -7,7 +7,7 @@ import { useProductStore } from "@/lib/store"
 export default function Cart() {
   const store = useProductStore()
 
-  function calcTotal(): number{
+  function calcTotal(): number {
     return store.cart.reduce((accum, product) => {
       return accum + product.price * product.quantity
     }, 0)
@@ -22,46 +22,54 @@ export default function Cart() {
         <h1>My Meals</h1>
       </div>
 
-      <div className={"w-full md:w-[80%] "}>
+      <div className={`w-full md:w-[80%]`}>
         {store.cart.map((product, inex) => (
           <div
             className={`
-            flex items-center gap-x-4 
-            md:gap-x-6 px-3 
+            flex items-center gap-x-4 px-3 border-primary
+             border-b-2 md:gap-x-6 
             md:px-10 md:flex md:justify-center 
             md:items-center`}
           >
             <img
               src={product.image}
-              className={`h-[100px] w-[100px] md:h-[150px] md:w-[150px]`}
+              className={`h-[120px] w-[100px] rounded-[30px] md:h-[150px]
+               md:w-[150px]`}
             />
 
-            <div className={``}>
-              <h1 className={`text-xl mb-2 mt-10`}>{product.name}</h1>
-              <p className={`text-2xl font-bold`}>₦{product.price}</p>
-
+            <div className={`w-full`}>
+              <h1 className={`mb-2 mt-10 text-[16px]`}>{product.name}</h1>
               <div
-                className={
-                  "gap-x-4 flex justify-between items-center px-4"
-                }
+                className={`flex items-center
+               justify-between`}
               >
+                <p className={`text-xl font-bold`}>₦{product.price}</p>
+                <p className="text-[14px] mr-4">
+                  x
+                  <span className="font-extrabold text-[18px]">
+                    {product.quantity}
+                  </span>
+                </p>
+              </div>
+
+              <div className={`gap-x-4 flex justify-between items-center px-4`}>
                 <button
                   className={`flex items-center justify-center rounded-3xl 
                 border-2 bg-primary p-4 font-bold`}
-                onClick={() => {
-                  store.incrementQuantity(product.id)
-                  console.log("Remove product:", product.id)
-                }}
+                  onClick={() => {
+                    store.incrementQuantity(product.id)
+                    console.log("Remove product:", product.id)
+                  }}
                 >
                   <IoMdAdd />
                 </button>
                 <button
                   className={`flex items-center justify-center rounded-3xl 
                 border-2 bg-primary p-4 font-bold size-12`}
-                onClick={() => {
-                  store.decrementQuantity(product.id)
-                  console.log("Remove product:", product.id)
-                }}
+                  onClick={() => {
+                    store.decrementQuantity(product.id)
+                    console.log("Remove product:", product.id)
+                  }}
                 >
                   <IoMdRemove />
                 </button>
@@ -75,7 +83,7 @@ export default function Cart() {
                   }}
                 >
                   <IoMdClose />
-                </button>  
+                </button>
               </div>
             </div>
           </div>
