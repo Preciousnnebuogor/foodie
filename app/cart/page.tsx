@@ -38,7 +38,7 @@ export default function Cart() {
 
             <div className={``}>
               <h1 className={`text-xl mb-2 mt-10`}>{product.name}</h1>
-              <p className={`text-2xl font-bold`}>#{product.price}</p>
+              <p className={`text-2xl font-bold`}>₦{product.price}</p>
 
               <div
                 className={
@@ -47,7 +47,11 @@ export default function Cart() {
               >
                 <button
                   className={`flex items-center justify-center rounded-3xl 
-                border-2 bg-primary p-4 font-bold size-12`}
+                border-2 bg-primary p-4 font-bold`}
+                onClick={() => {
+                  store.incrementQuantity(product.id)
+                  console.log("Remove product:", product.id)
+                }}
                 >
                   <IoMdAdd />
                 </button>
@@ -63,7 +67,7 @@ export default function Cart() {
                 </button>
 
                 <button
-                  className={`flex size-12 items-center justify-center 
+                  className={`flex  items-center justify-center 
                 rounded-3xl border-2 bg-primary p-4 font-bold`}
                   onClick={() => {
                     store.removeFromCart(product.id)
