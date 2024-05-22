@@ -12,9 +12,9 @@ type IStore = {
   cart: IProduct[]
   addToCart: (product: IProduct) => void
   removeFromCart: (productId: number) => void
-  // incrementQuantity: (productId: number) => void
-  // decrementQuantity: (productId: number) => void
-
+  incrementQuantity: (productId: number) => void
+  decrementQuantity: (productId: number) => void
+  total: number
   clearCart: () => void
 }
 
@@ -40,15 +40,54 @@ export const useProductStore = create(
             (product) => product.id !== productId
           )
 
-          // filteredProduct[0].image
-
           return {
             cart: filteredProduct,
           }
         }),
 
       clearCart: () => set({ cart: [] }),
-    }),
+      incrementQuantity: (productId) =>
+        set((state) => {
+          const filteredProduct: IProduct[] = state.cart.map(
+            (product, index) => {
+              if (product.id !== productId) {
+                return product
+              } else {
+                return {
+                  ...product,
+                  quantity: product.quantity + 1,
+                }
+              }
+            }
+          )
+
+          return {
+            cart: filteredProduct,
+          }
+        }),
+
+        decrementQuantity: (productId) =>
+          set((state) => {
+            const filteredProduct: IProduct[] = state.cart.map(
+              (product, index) => {
+                if (product.id !== productId) {
+                  return product
+                } else {
+                  return {
+                    ...product,
+                    quantity: product.quantity - 1,
+                  }
+                }
+              }
+            )
+  
+            return {
+              cart: filteredProduct,
+            }
+          }),
+        total: 0,
+      }),
+
     {
       name: "productStore",
       storage: createJSONStorage(() => localStorage),
