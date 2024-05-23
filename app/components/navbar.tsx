@@ -24,9 +24,7 @@ export default function Navbar() {
             <Link href={"/product"} className={" hover:text-gray-50 p-4"}>
               Meal
             </Link>
-            <Link href={"/"} className={" hover:text-gray-50 p-4"}>
-              Feedback
-            </Link>
+      
             <Link
               href={"/cart"}
               className={
@@ -48,6 +46,9 @@ export default function Navbar() {
                 />
               </svg>
               {store.cart.length}
+            </Link>
+            <Link href={"/feedback"} className={" hover:text-gray-50 p-4"}>
+              Feedback
             </Link>
             <ThemeToggle/>
 
