@@ -25,7 +25,7 @@ export default function Navbar() {
               Meal
             </Link>
             <Link href={"/"} className={" hover:text-gray-50 p-4"}>
-              Admin
+              Feedback
             </Link>
             <Link
               href={"/cart"}
