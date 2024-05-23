@@ -89,6 +89,17 @@ export default function Cart() {
           </div>
         ))}
       </div>
+      <div className={"flex flex-col items-center justify-center mt-4"}>
+        <p className={"text-2xl font-bold"}>Total:</p>
+        <p className={"text-2xl font-bold"}>₦{calcTotal()}</p>
+        <button
+          className={
+            "bg-primary rounded-full to py-4 px-8 uppercase text-xl md:self-start my-5"
+          }
+        >
+          Pay Now
+        </button>
+      </div>
     </div>
   )
 }
