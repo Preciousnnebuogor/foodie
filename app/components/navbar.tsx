@@ -48,7 +48,7 @@ export default function Navbar() {
               {store.cart.length}
             </Link>
             <Link href={"/login"} className={" hover:text-gray-50 p-4"}>
-              Feedback
+              Login
             </Link>
             <ThemeToggle/>
 
