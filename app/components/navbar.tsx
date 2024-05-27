@@ -47,7 +47,7 @@ export default function Navbar() {
               </svg>
               {store.cart.length}
             </Link>
-            <Link href={"/feedback"} className={" hover:text-gray-50 p-4"}>
+            <Link href={"/login"} className={" hover:text-gray-50 p-4"}>
               Feedback
             </Link>
             <ThemeToggle/>
