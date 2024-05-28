@@ -35,7 +35,7 @@ export default function Hero() {
               our brand motto pass here
             </p>
             <Link
-              href={""}
+              href={"/product"}
               className={
                 "rounded-full bg-gradient-to-r from-orange-100 to bg-orange-400 py-4 px-8 uppercase text-xl md:self-start my-5"
               }
