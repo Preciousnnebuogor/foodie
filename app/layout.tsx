@@ -1,15 +1,13 @@
 import "@/styles/globals.css"
 import { Metadata } from "next"
 import { TailwindIndicator, ThemeProvider } from "@/comps"
-
-
-
-
 import { cn } from "@/lib"
-import { siteConfig } from "@/lib/config"
-import Navbar from "./components/navbar"
-import Footer from "./components/footer"
 
+import { siteConfig } from "@/lib/config"
+
+import Footer from "./components/footer"
+import Navbar from "./components/navbar"
+import Provider from "./provider"
 
 export const metadata: Metadata = {
   title: {
@@ -38,19 +36,21 @@ export default function RootLayout({ children }: RootLayoutProps) {
       <head />
       <body
         className={cn(
-          "min-h-screen bg-background font-sans antialiased",
+          "min-h-screen bg-background font-sans antialiased"
           //fontSans.variable
         )}
       >
-        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-          <div className="relative flex min-h-screen flex-col">
-            <Navbar/>
-            {/* <SiteHeader /> */}
-            <div className="flex-1">{children}</div>
-            <Footer/>
-          </div>
-          {/* <TailwindIndicator /> */}
-        </ThemeProvider>
+        <Provider>
+          <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+            <div className="relative flex min-h-screen flex-col">
+              <Navbar />
+              {/* <SiteHeader /> */}
+              <div className="flex-1">{children}</div>
+              <Footer />
+            </div>
+            {/* <TailwindIndicator /> */}
+          </ThemeProvider>
+        </Provider>
       </body>
     </html>
   )
