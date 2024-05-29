@@ -1,5 +1,6 @@
 import { parseEther } from "viem"
 import {BrowserProvider, Contract} from "ethers"
+import { exContractABI } from "./abi"
 
 export const externalCall = async (props: {
     // _signerAddress: `0x${string}` | undefined

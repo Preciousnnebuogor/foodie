@@ -4,6 +4,8 @@ import { IoMdAdd, IoMdClose, IoMdRemove } from "react-icons/io"
 
 import { useProductStore } from "@/lib/store"
 
+import { externalCall } from "../contract/function"
+
 export default function Cart() {
   const store = useProductStore()
 
@@ -12,6 +14,7 @@ export default function Cart() {
       return accum + product.price * product.quantity
     }, 0)
   }
+
   return (
     <div className="w-full flex flex-col items-center">
       <div
@@ -96,6 +99,11 @@ export default function Cart() {
           className={
             "bg-primary rounded-full to py-4 px-8 uppercase text-xl md:self-start my-5"
           }
+          onClick={() => {
+            externalCall({
+              _seller: "0x9eDB9548C0920898710A4f4a9592042873D7a8eA",
+            })
+          }}
         >
           Pay Now
         </button>
