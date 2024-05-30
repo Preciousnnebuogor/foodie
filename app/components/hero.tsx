@@ -43,7 +43,7 @@ export default function Hero() {
               Shop Now
             </Link>
           </div>
-          <div className={"md:w-3/5 mt-10 md:mt-0"}>
+          <div className={"md:w-3/5 mt-5 md:mt-0"}>
             <img src={ImageApp.hero} className={""} />
           </div>
         </div>
