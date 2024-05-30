@@ -15,7 +15,7 @@ export default function Hero() {
             }>
            <h2
               className={
-                "text-5xl text-center md:text-left md:self-start mt-20 md:mt-0"
+                "text-4xl md:text-5xl text-center md:text-left md:self-start mt-20 md:mt-0"
               }
             >
               Special delicacy for more
