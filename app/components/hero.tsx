@@ -25,14 +25,14 @@ export default function Hero() {
                 "uppercase trackin-wide text-center md:text-left md:self-start "
               }
             >
-              Our brand is sure and here
+              Order Now, Eat Now
             </p>
             <p
               className={
                 "uppercase trackin-wide text-center md:text-left md:self-start"
               }
             >
-              our brand motto pass here
+               Eat Healthy, Stay Healthy
             </p>
             <Link
               href={"/product"}
@@ -40,10 +40,10 @@ export default function Hero() {
                 "rounded-full bg-gradient-to-r from-orange-100 to bg-orange-400 py-4 px-8 uppercase text-xl md:self-start my-5"
               }
             >
-              Shop Now
+              Meal Time
             </Link>
           </div>
-          <div className={"md:w-3/5 mt-5 md:mt-0"}>
+          <div className={"md:w-3/5  md:mt-0"}>
             <img src={ImageApp.hero} className={""} />
           </div>
         </div>
