@@ -32,18 +32,18 @@ export default function Hero() {
                 "uppercase trackin-wide text-center md:text-left md:self-start"
               }
             >
-               Eat Healthy, Stay Healthy
+               Eat Healthy, Stay Healthy 
             </p>
             <Link
               href={"/product"}
               className={
-                "rounded-full bg-gradient-to-r from-orange-100 to bg-orange-400 py-4 px-8 uppercase text-xl md:self-start my-5"
+                "rounded-full bg-gradient-to-r from-orange-100 to bg-orange-400 py-4 px-8 uppercase text-xl md:self-start mt-4"
               }
             >
               Meal Time
             </Link>
           </div>
-          <div className={"md:w-3/5  md:mt-0"}>
+          <div className={"md:w-3/5 mt-5 md:mt-0"}>
             <img src={ImageApp.hero} className={""} />
           </div>
         </div>
