@@ -14,7 +14,7 @@ Another problem is the inadequate access to food for many customers. Many people
 
 ## Solution
 
-Foodie app is dedicated to providing meals with the proper nutritional value each dish should contain. We ensure that all our meals are prepared with the right ingridents in a very clean environment, minimizing the risk of contamination. Additionally, our food is sold online, allowing anyone to place an order from any location. 
+Foodie app is dedicated to providing meals with the proper nutritional value each dish should contain. We ensure that all our meals are prepared with the right ingredients in a very clean environment, minimizing the risk of contamination. Additionally, our food is sold online, allowing anyone to place an order from any location. 
 
 ## Methodology
 
@@ -27,17 +27,17 @@ The Foodie app is designed to make healthy eating easy, convenient, and accessib
 
 ### Short description
 
-The Foodie app is committed to making healthy eating simple and accessible. By focusing on nutrient-rich meals, maintaining high hygiene standards, and providing a seamless online ordering experience which enables the use of minipay for payment. 
+The Foodie app is committed to making healthy eating simple and accessible. By focusing on nutrient-rich meals, maintaining high hygiene standards, and providing a seamless online ordering experience which enables the use of Minipay for payment. 
 
 ### Road Map
-- Adding of delivery management service
-- Addition of Admin sector to management orders and delivery
+- Addition of delivery management service
+- Addition of Admin section to manage orders and delivery
 - Additon of Map to enable customers monitor their orders
 
 
 ### How it was made
 
-This project was made using Next.js for the frontend and Zustand for the state management. connectiing with my smart contract was done usng Wagmi, ethers, viem and wallet connect.
+This project was made using Next.js for the frontend and Zustand for the state management. Connectiing with my smart contract was done using Wagmi, ethers, viem and wallet connect.
 
 
 ### Tools
