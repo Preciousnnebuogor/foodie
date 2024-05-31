@@ -23,6 +23,7 @@ export const ImageApp = {
     food22: "/Ogbono.jpeg",
     food23: "/papi n moimoi.jpeg",
     food24: "/ricestew.jpeg",
+    readme: "/home.png",
   }
   
   
