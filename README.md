@@ -59,6 +59,12 @@ This project was made using Next.js for the frontend and Zustand for the state m
 - Run `npm run dev` to start the Next.js server
  
 ### Screenshots
+![img](./public/img.jpg)
+![img](./public/imgb.jpg)
+![img](./public/imgb2.jpg)
+![img](./public/img2b.jpg)
+![img](./public/img2.jpg)
+
 
 ### Links
 
