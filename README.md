@@ -50,7 +50,7 @@ This project was made using Next.js for the frontend and Zustand for the state m
 
 ### Frameworks used
 
-- Next.js, Solidity, Wagmi, Zustand, Shadcn, Framer-motion, ethers, viem, radius-ui, @rainbow- me, @celo/rainbowkit-celo, @ headlessui/react.
+- Next.js, Solidity, Wagmi, Zustand, Shadcn, Framer-motion, ethers, viem, radius-ui, @rainbow- me, @celo/rainbowkit-celo, @headlessui/react.
 
 ### Instructions
 
