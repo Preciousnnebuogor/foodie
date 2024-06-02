@@ -1,13 +1,16 @@
 "use client"
 
 import { IoMdAdd, IoMdClose, IoMdRemove } from "react-icons/io"
+import { toast } from "sonner"
+
 import { useProductStore } from "@/lib/store"
-import { transferCusdTokens } from "../contract/transferCusd"
+
 import { useMinipay } from "../contract/miniPay"
+import { transferCusdTokens } from "../contract/transferCusd"
 
 export default function Cart() {
   const store = useProductStore()
-  const {walletAddress} = useMinipay()
+  const { walletAddress } = useMinipay()
 
   function calcTotal(): number {
     return store.cart.reduce((accum, product) => {
@@ -99,13 +102,19 @@ export default function Cart() {
           className={
             "bg-primary rounded-full to py-4 px-8 uppercase text-xl md:self-start my-5"
           }
-          onClick={() => {
-            transferCusdTokens({
-              env: "CUSD_TESTNET",
-              userAddress: walletAddress!,
-              to: "0x462E5F272B8431562811126779da6EcaE51A5B40",
-              amount: 2
-            })
+          onClick={async () => {
+            try {
+              await transferCusdTokens({
+                env: "CUSD_TESTNET",
+                userAddress: walletAddress!,
+                to: "0x462E5F272B8431562811126779da6EcaE51A5B40",
+                amount: 2,
+              })
+              toast.success("Transfer Successful")
+              store.clearCart()
+            } catch (error) {
+              toast.error("Transfer Unsuccessful")
+            }
           }}
         >
           Pay Now
