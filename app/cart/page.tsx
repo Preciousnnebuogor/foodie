@@ -1,13 +1,13 @@
 "use client"
 
 import { IoMdAdd, IoMdClose, IoMdRemove } from "react-icons/io"
-
 import { useProductStore } from "@/lib/store"
-
-import { externalCall } from "../contract/function"
+import { transferCusdTokens } from "../contract/transferCusd"
+import { useMinipay } from "../contract/miniPay"
 
 export default function Cart() {
   const store = useProductStore()
+  const {walletAddress} = useMinipay()
 
   function calcTotal(): number {
     return store.cart.reduce((accum, product) => {
@@ -100,8 +100,11 @@ export default function Cart() {
             "bg-primary rounded-full to py-4 px-8 uppercase text-xl md:self-start my-5"
           }
           onClick={() => {
-            externalCall({
-              _seller: "0x9eDB9548C0920898710A4f4a9592042873D7a8eA",
+            transferCusdTokens({
+              env: "CUSD_TESTNET",
+              userAddress: walletAddress!,
+              to: "0x462E5F272B8431562811126779da6EcaE51A5B40",
+              amount: 2
             })
           }}
         >
