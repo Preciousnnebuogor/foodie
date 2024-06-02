@@ -5,6 +5,7 @@ import { toast } from "sonner"
 
 import { useProductStore } from "@/lib/store"
 
+import addOrder from "../contactFunctions/addOrder"
 import { useMinipay } from "../contract/miniPay"
 import { transferCusdTokens } from "../contract/transferCusd"
 
@@ -116,6 +117,7 @@ export default function Cart() {
               .catch(() => {
                 toast.error("Transfer Unsuccessful")
               })
+            addOrder(walletAddress!, Date.now().toString(), calcTotal())
           }}
         >
           Buy Now

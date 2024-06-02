@@ -1,4 +1,6 @@
-[
+export const smartContractAddress = "0x803Be8c8b613c78ab83D179120d363676Adc4649"
+
+export const smartContractAbi = [
 	{
 		"inputs": [
 			{
