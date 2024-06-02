@@ -1,4 +1,5 @@
-export const exContractABI = [
+export const contractAddress = ""
+export const contractABI = [
     {
       inputs: [
         {

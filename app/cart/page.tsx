@@ -102,19 +102,20 @@ export default function Cart() {
           className={
             "bg-primary rounded-full to py-4 px-8 uppercase text-xl md:self-start my-5"
           }
-          onClick={async () => {
-            try {
-              await transferCusdTokens({
-                env: "CUSD_TESTNET",
-                userAddress: walletAddress!,
-                to: "0x462E5F272B8431562811126779da6EcaE51A5B40",
-                amount: 2,
+          onClick={() => {
+            transferCusdTokens({
+              env: "CUSD_TESTNET",
+              userAddress: walletAddress!,
+              to: "0x462E5F272B8431562811126779da6EcaE51A5B40",
+              amount: 2,
+            })
+              .then(() => {
+                store.clearCart()
+                toast.success("Transfer successful")
               })
-              toast.success("Transfer Successful")
-              store.clearCart()
-            } catch (error) {
-              toast.error("Transfer Unsuccessful")
-            }
+              .catch(() => {
+                toast.error("Transfer Unsuccessful")
+              })
           }}
         >
           Pay Now
