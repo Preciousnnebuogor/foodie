@@ -118,7 +118,7 @@ export default function Cart() {
               })
           }}
         >
-          Pay Now
+          Buy Now
         </button>
       </div>
     </div>
