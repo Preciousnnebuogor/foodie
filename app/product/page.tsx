@@ -35,7 +35,7 @@ export default function ProductPage() {
                 <img src={value.image} className={"h-full w-full"} />
               </Link>
               <p>{value.name}</p>
-              <p> #{value.price}</p>
+              <p> ₦{value.price}</p>
             </div>
           ))}
         </div>
