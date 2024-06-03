@@ -70,7 +70,7 @@ This project was made using Next.js for the frontend and Zustand for the state m
 
 - [Github link](https://github.com/Preciousnnebuogor/foodie)
 - [Vercel link](https://foodie-ashen-phi.vercel.app/)
-- Video link
+- [Video link] (https://www.youtube.com/watch?v=_fMUxrwd6NA)
 
 
 
